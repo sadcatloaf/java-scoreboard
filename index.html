@@ -22,7 +22,7 @@
     <Header>
         <div class="container-fluid">
             <div class="text-end text-light">
-                <button class="btn btn-danger fs-3">Reset</button>
+                <button onclick="reset()" class="btn btn-danger fs-3">Reset</button>
             </div>
         </div>
     </Header>
@@ -34,23 +34,23 @@
                     <div class="row py-4">
                         <div class="col-6">
                             <p class="fs-1 p-2 m-3">HOME</p>
-                            <p id="home-score" class="shadow py-5">0</p>
+                            <p id="home-score" class="score shadow py-5">0</p>
                         </div>
                         <div class="col-6">
                             <p class="fs-1 p-2 m-3">AWAY</p>
-                            <p class="score shadow py-5">0</p>
+                            <p id="away-score" class="score shadow py-5">0</p>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="row justify-content-evenly text-center mt-3">
                 <div class="col-3 m-2">
-                    <button onclick="homeScore1()" class="board fs-1 m-3 p-1">HOME+1</button>
-                    <button onclick="homeScore3()" class="board fs-1  m-3 p-1">HOME+3</button>
+                    <button onclick="addScore('home', 1)" class="board fs-1 m-3 p-1">HOME+1</button>
+                    <button onclick="addScore('home', 3)" class="board fs-1  m-3 p-1">HOME+3</button>
                 </div>
                 <div class="col-3 m-2">
-                    <button onclick="awayScore1()" class="board fs-1 m-3 p-1">AWAY+1</button>
-                    <button onclick="awayScore3()" class="board fs-1 m-3 p-1">AWAY+3</button>
+                    <button onclick="addScore('away', 1)" class="board fs-1 m-3 p-1">AWAY+1</button>
+                    <button onclick="addScore('away', 3)" class="board fs-1 m-3 p-1">AWAY+3</button>
                 </div>
             </section>
         </div>

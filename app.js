@@ -1,34 +1,35 @@
 let home = 0
 let away = 0
 
-function homeScore1() {
-    home += 1
-    console.log('home score', home)
-    drawHome()
+
+function addScore(location, score) {
+    if (location == "home") {
+        home += score
+        drawHome()
+    }
+    if (location == "away") {
+        away += score
+        drawAway()
+    }
 }
-
-function awayScore1() {
-    away += 1
-    console.log('away score', away)
-    drawAway()
-}
-
-function homeScore3() {
-    home += 3
-    console.log('home score', home)
-    drawHome()
-
-}
-
-function awayScore3() {
-    away += 3
-    console.log('away score', away)
-    drawAway()
-}
-
 
 function drawHome() {
     let homeScoreElm = document.getElementById('home-score')
     console.log(homeScoreElm)
     homeScoreElm.innerText = home
 }
+
+function drawAway() {
+    let awayScoreElm = document.getElementById('away-score')
+    console.log(awayScoreElm)
+    awayScoreElm.innerText = away
+}
+
+function reset() {
+    home = 0
+    away = 0
+    drawHome()
+    drawAway()
+}
+
+
